@@ -10,8 +10,8 @@ export function create(): Game {
   };
 }
 
-export function append(game: Game, container: Element): void {
-  container.appendChild(game.display.getContainer()!);
+export function getElement(game: Game): HTMLElement {
+  return game.display.getContainer()!;
 }
 
 export function drawMap(game: Game): void {

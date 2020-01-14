@@ -2,5 +2,5 @@ import * as Game from './Game';
 import './index.css';
 
 const game = Game.create();
-Game.append(game, document.body);
+document.body.appendChild(Game.getElement(game));
 Game.drawMap(game);
