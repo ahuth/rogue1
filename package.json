@@ -5,7 +5,8 @@
   "scripts": {
     "build": "react-scripts build",
     "lint": "eslint --ext .js,.ts src/",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "types": "tsc --noEmit"
   },
   "browserslist": [
     ">0.2%",
@@ -15,5 +16,8 @@
   ],
   "dependencies": {
     "react-scripts": "3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.4"
   }
 }
