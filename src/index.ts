@@ -1,3 +1,5 @@
+import Game from './Game';
 import './index.css';
 
-console.log('hello world');
+const game = new Game();
+game.init(document.body);

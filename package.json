@@ -15,7 +15,8 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "rot-js": "^2.1.1"
   },
   "devDependencies": {
     "typescript": "^3.7.4"
