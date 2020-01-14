@@ -1,22 +1,23 @@
 import * as ROT from 'rot-js';
 
-export default class {
-  display: ROT.Display;
+type Game = {
+  display: ROT.Display,
+};
 
-  constructor() {
-    this.display = new ROT.Display({ width: 10, height: 5 });
-  }
+export function create(): Game {
+  return {
+    display: new ROT.Display({ width: 10, height: 5 }),
+  };
+}
 
-  init(container: Element) {
-    container.appendChild(this.display.getContainer()!);
-    this.drawMap();
-  }
+export function append(game: Game, container: Element): void {
+  container.appendChild(game.display.getContainer()!);
+}
 
-  private drawMap() {
-    const map = new ROT.Map.Arena(10, 5);
+export function drawMap(game: Game): void {
+  const map = new ROT.Map.Arena(10, 5);
 
-    map.create((x, y, wall) => {
-      this.display.draw(x, y, wall ? '#' : '.', 'white', 'black');
-    });
-  }
+  map.create((x, y, wall) => {
+    game.display.draw(x, y, wall ? '#' : '.', 'white', 'black');
+  });
 }
