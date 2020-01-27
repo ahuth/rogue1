@@ -14,7 +14,7 @@ export function getElement(game: Game): HTMLElement {
   return game.display.getContainer()!;
 }
 
-export function drawMap(game: Game): void {
+export function draw(game: Game): void {
   const map = new ROT.Map.Arena(10, 5);
 
   map.create((x, y, wall) => {

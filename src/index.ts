@@ -3,4 +3,4 @@ import './index.css';
 
 const game = Game.create();
 document.body.appendChild(Game.getElement(game));
-Game.drawMap(game);
+Game.draw(game);
