@@ -3,9 +3,6 @@ export default class Glyph {
   foreground: string;
   background: string;
 
-  static wall = new Glyph('#', 'white', 'black');
-  static ground = new Glyph(' ', 'black', 'black');
-
   constructor(char: string, foreground = 'white', background = 'black') {
     this.char = char;
     this.foreground = foreground;

@@ -2,6 +2,9 @@ import * as ROT from 'rot-js';
 import Glyph from './Glyph';
 import Tile from './Tile';
 
+const wall = new Glyph('#', 'white', 'black');
+const ground = new Glyph(' ', 'black', 'black');
+
 export default class Map {
   tiles: Tile[] = [];
 
@@ -15,8 +18,9 @@ export default class Map {
     }
 
     generator.create((x, y, value) => {
-      const glyph = value === 1 ? Glyph.wall : Glyph.ground;
-      this.tiles.push(new Tile(glyph, x, y));
+      const glyph = value === 1 ? wall : ground;
+      const tile = new Tile(glyph, x, y);
+      this.tiles.push(tile);
     });
   }
 }
