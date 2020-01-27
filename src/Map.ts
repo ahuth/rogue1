@@ -19,10 +19,4 @@ export default class Map {
       this.tiles.push(new Tile(glyph, x, y));
     });
   }
-
-  draw(display: ROT.Display) {
-    this.tiles.forEach((tile) => {
-      display.draw(tile.x, tile.y, tile.glyph.char, tile.glyph.foreground, tile.glyph.background);
-    });
-  }
 }
