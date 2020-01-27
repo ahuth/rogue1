@@ -1,6 +1,6 @@
-import * as Game from './Game';
+import Game from './Game';
 import './index.css';
 
-const game = Game.create();
-document.body.appendChild(Game.getElement(game));
-Game.draw(game);
+const game = new Game();
+document.body.appendChild(game.getElement());
+game.draw();
