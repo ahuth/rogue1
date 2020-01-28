@@ -10,4 +10,9 @@ export default class Tile {
     this.x = x;
     this.y = y;
   }
+
+  setPosition(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
 }
