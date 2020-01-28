@@ -12,6 +12,10 @@ export default class Display {
     return this.rotDisplay.getContainer()!;
   }
 
+  clear(): void {
+    this.rotDisplay.clear();
+  }
+
   drawTile = (tile: Tile): void => {
     this.rotDisplay.draw(
       tile.x,

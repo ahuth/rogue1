@@ -10,7 +10,7 @@ export default class Player {
     this.tile = new Tile(glyph, x, y);
   }
 
-  setPosition(x: number, y: number) {
-    this.tile.setPosition(x, y);
+  move(dX: number, dY: number) {
+    this.tile.setPosition(this.tile.x + dX, this.tile.y + dY);
   }
 }
