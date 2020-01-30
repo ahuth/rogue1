@@ -29,4 +29,8 @@ export default class Map {
   getTiles(): Tile[] {
     return this.tiles;
   }
+
+  getTile(atPosition: Point): Tile | undefined {
+    return this.tiles.find(tile => tile.getPosition().equals(atPosition));
+  }
 }

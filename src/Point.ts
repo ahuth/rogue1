@@ -13,4 +13,8 @@ export default class Point {
       this.y + other.y,
     );
   }
+
+  equals(other: Point) {
+    return this.x === other.x && this.y === other.y;
+  }
 }
