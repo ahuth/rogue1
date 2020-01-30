@@ -29,17 +29,18 @@ export default class Game {
     this.player.move(delta);
   }
 
-  handleInput(key: string): void {
+  handleKeyDown(key: string): void {
     switch (key) {
       case 'ArrowUp':
-        this.move(0, -1); break;
+        this.move(0, -1);break;
       case 'ArrowDown':
-        this.move(0, 1); break;
+        this.move(0, 1);break;
       case 'ArrowLeft':
-        this.move(-1, 0); break;
+        this.move(-1, 0);break;
       case 'ArrowRight':
-        this.move(1, 0); break;
-      default: // Noop
+        this.move(1, 0);break;
+      default:
+        return;
     }
 
     this.clear();

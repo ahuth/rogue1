@@ -4,7 +4,7 @@ import './index.css';
 const game = new Game();
 
 window.addEventListener('keydown', function (event) {
-  game.handleInput(event.key);
+  game.handleKeyDown(event.key);
 });
 
 document.body.appendChild(game.getElement());
