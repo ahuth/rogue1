@@ -5,14 +5,18 @@ import Tile from './Tile';
 const glyph = new Glyph('@', 'hotpink', 'black');
 
 export default class Player {
-  tile: Tile;
+  private tile: Tile;
 
   constructor(position: Point) {
     this.tile = new Tile(glyph, position);
   }
 
   getPosition(): Point {
-    return this.tile.position;
+    return this.tile.getPosition();
+  }
+
+  getTile(): Tile {
+    return this.tile;
   }
 
   setPosition(position: Point): void {

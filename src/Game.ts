@@ -7,9 +7,9 @@ const height = 20;
 const width = 80;
 
 export default class Game {
-  display = new Display(height, width);
-  map = new Map(height, width);
-  player = new Player(new Point(0, 0));
+  private display = new Display(height, width);
+  private map = new Map(height, width);
+  private player = new Player(new Point(0, 0));
 
   getElement(): HTMLElement {
     return this.display.getElement()!;
@@ -20,8 +20,8 @@ export default class Game {
   }
 
   draw(): void {
-    this.map.tiles.forEach(this.display.drawTile);
-    this.display.drawTile(this.player.tile);
+    this.map.getTiles().forEach(this.display.drawTile);
+    this.display.drawTile(this.player.getTile());
   }
 
   move(dX: number, dY: number): void {

@@ -7,7 +7,7 @@ const wall = new Glyph('#', 'white', 'black');
 const ground = new Glyph(' ', 'black', 'black');
 
 export default class Map {
-  tiles: Tile[] = [];
+  private tiles: Tile[] = [];
 
   constructor(height: number, width: number) {
     const generator = new ROT.Map.Cellular(width, height);
@@ -24,5 +24,9 @@ export default class Map {
       const tile = new Tile(glyph, position);
       this.tiles.push(tile);
     });
+  }
+
+  getTiles(): Tile[] {
+    return this.tiles;
   }
 }

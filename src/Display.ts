@@ -17,12 +17,15 @@ export default class Display {
   }
 
   drawTile = (tile: Tile): void => {
+    const position = tile.getPosition();
+    const glyph = tile.getGlyph();
+
     this.rotDisplay.draw(
-      tile.position.x,
-      tile.position.y,
-      tile.glyph.char,
-      tile.glyph.foreground,
-      tile.glyph.background,
+      position.x,
+      position.y,
+      glyph.char,
+      glyph.foreground,
+      glyph.background,
     );
   }
 }
