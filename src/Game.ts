@@ -26,7 +26,8 @@ export default class Game {
 
   move(dX: number, dY: number): void {
     const delta = new Point(dX, dY);
-    this.player.move(delta);
+    const proposedPosition = this.player.getPosition().add(delta);
+    this.player.setPosition(proposedPosition);
   }
 
   handleKeyDown(key: string): void {

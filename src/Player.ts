@@ -11,8 +11,11 @@ export default class Player {
     this.tile = new Tile(glyph, position);
   }
 
-  move(delta: Point) {
-    const next = this.tile.position.add(delta);
-    this.tile.setPosition(next);
+  getPosition(): Point {
+    return this.tile.position;
+  }
+
+  setPosition(position: Point): void {
+    this.tile.setPosition(position);
   }
 }
