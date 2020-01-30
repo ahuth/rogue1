@@ -18,8 +18,8 @@ export default class Display {
 
   drawTile = (tile: Tile): void => {
     this.rotDisplay.draw(
-      tile.x,
-      tile.y,
+      tile.position.x,
+      tile.position.y,
       tile.glyph.char,
       tile.glyph.foreground,
       tile.glyph.background,

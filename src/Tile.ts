@@ -1,18 +1,16 @@
 import Glyph from './Glyph';
+import Point from './Point';
 
 export default class Tile {
   glyph: Glyph;
-  x: number;
-  y: number;
+  position: Point;
 
-  constructor(glyph: Glyph, x: number, y: number) {
+  constructor(glyph: Glyph, position: Point) {
     this.glyph = glyph;
-    this.x = x;
-    this.y = y;
+    this.position = position;
   }
 
-  setPosition(x: number, y: number) {
-    this.x = x;
-    this.y = y;
+  setPosition(position: Point) {
+    this.position = position;
   }
 }
