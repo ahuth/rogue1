@@ -8,7 +8,7 @@ export default class Player {
   private tile: Tile;
 
   constructor(position: Point) {
-    this.tile = new Tile(glyph, position);
+    this.tile = new Tile(glyph, position, false);
   }
 
   getPosition(): Point {

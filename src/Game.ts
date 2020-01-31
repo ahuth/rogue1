@@ -27,7 +27,11 @@ export default class Game {
   move(dX: number, dY: number): void {
     const delta = new Point(dX, dY);
     const proposedPosition = this.player.getPosition().add(delta);
-    this.player.setPosition(proposedPosition);
+    const tile = this.map.getTile(proposedPosition);
+
+    if (tile?.isTraversable()) {
+      this.player.setPosition(proposedPosition);
+    }
   }
 
   handleKeyDown(key: string): void {

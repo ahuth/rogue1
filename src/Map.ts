@@ -21,7 +21,7 @@ export default class Map {
     generator.create((x, y, value) => {
       const glyph = value === 1 ? wall : ground;
       const position = new Point(x, y);
-      const tile = new Tile(glyph, position);
+      const tile = new Tile(glyph, position, value !== 1);
       this.tiles.push(tile);
     });
   }
